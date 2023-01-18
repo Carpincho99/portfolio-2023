@@ -55,6 +55,7 @@ type GLTFResult = GLTF & {
 
 export function Model(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/Carpincho3D-transformed.glb') as unknown as GLTFResult
+
   return (
     <group {...props} dispose={null}>
       <group position={[0.73, 1.01, -0.75]} rotation={[0, -0.57, 0]}>

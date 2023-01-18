@@ -2,7 +2,7 @@ import { NavLinks } from '../../constants'
 import styles from './Nav.module.css'
 
 const Nav = () => (
-  <div className={`sticky flex items-center top-0 left-full h-screen w-20 ${styles.textVertical}`}>
+  <div className={`sticky flex items-center top-0 right-0 h-screen w-20 ${styles.textVertical}`}>
     <ul className="py-2">
       {
         NavLinks.map((link) => (
