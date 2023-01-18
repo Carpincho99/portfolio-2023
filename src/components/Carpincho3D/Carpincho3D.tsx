@@ -4,6 +4,7 @@ Command: npx gltfjsx@6.1.3 ../../assets/Carpincho3D.gltf -T -t -o Carpincho3D
 */
 
 import * as THREE from 'three'
+import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 

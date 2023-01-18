@@ -1,19 +1,21 @@
 import { OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
-import { Model } from './components/Carpincho3D/Carpincho3D'
+import { Model as Carpincho, Nav } from './components'
+import Social from './components/Social/Social'
 
 function App() {
   return (
-  <div className="flex items-center justify-center">
-    <div className="w-full h-screen">
-      <Canvas>
-        <ambientLight />
-        <pointLight position={[-5, -5, -5]} />
-        <Model />
-        <OrbitControls />
-      </Canvas>
-    </div>
-  </div>
+      <div className="flex items-center justify-center">
+      <Nav />
+      <Social />
+        <div className="w-80 h-screen bg-gray-300">
+          <Canvas>
+            <ambientLight intensity={0.8} />
+            <Carpincho />
+            <OrbitControls />
+          </Canvas>
+        </div>
+      </div>
   )
 }
 

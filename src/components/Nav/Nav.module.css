@@ -1,0 +1,20 @@
+.textVertical{
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+}
+
+.navLine{
+  position: relative;
+}
+
+.navLine::after {
+  content: '';
+  height: 2px;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: rotate(90deg);
+}
+
