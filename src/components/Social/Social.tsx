@@ -1,19 +1,19 @@
 import { FaGithubSquare, FaInstagramSquare, FaLinkedin } from 'react-icons/fa'
 
 const Social = () => (
-  <div className="sticky flex flex-col justify-end items-center top-0 left-0 h-screen w-20">
+  <div className="hidden sticky md:flex flex-col justify-end items-center top-0 left-0 h-screen w-20">
     <ul className="py-2">
       <li className="mb-3">
-        <FaGithubSquare size={30} />
+        <FaGithubSquare color="#F77F00" size={30} />
       </li>
       <li className="mb-3">
-        <FaLinkedin size={30} />
+        <FaLinkedin color="#F77F00" size={30} />
       </li>
       <li className="mb-3">
-        <FaInstagramSquare size={30} />
+        <FaInstagramSquare color="#F77F00" size={30} />
       </li>
     </ul>
-    <div className="bg-black h-12 w-[2px] mb-3 "></div>
+    <div className="bg-[#F77F00] h-12 w-[2px] mb-3 "></div>
   </div>
 )
 

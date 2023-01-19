@@ -6,17 +6,20 @@ import Social from './components/Social/Social'
 
 function App() {
   return (
-    <div className="flex items-center justify-around">
-      <Social />
-      <div className="w-full h-screen">
-        <Hero />
-      </div>
-      <div className="w-full h-screen bg-blue-300">
-        <Canvas>
-          <ambientLight intensity={0.8} />
-          <Carpincho />
-          <OrbitControls />
-        </Canvas>
+    <div className="flex justify-between ">
+        <Social />
+      <div className="flex flex-col w-full lg:flex-row">
+        <div className="w-full md:mt-44">
+          <Hero />
+        </div>
+        <div className="w-full flex items-center justify-center" >
+          <Canvas>
+            <ambientLight intensity={0.8} />
+            <directionalLight intensity={0.4} position={[0, 0, 1]} />
+            <Carpincho  />
+            <OrbitControls />
+          </Canvas>
+        </div>
       </div>
       <Nav />
     </div>
