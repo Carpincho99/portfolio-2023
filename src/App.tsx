@@ -1,4 +1,4 @@
-import { OrbitControls } from '@react-three/drei'
+import { Center, OrbitControls, PresentationControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { Model as Carpincho, Nav } from './components'
 import Hero from './components/Hero/Hero'
@@ -9,16 +9,18 @@ function App() {
     <>
       <Nav />
       <Social />
-      <div className="md:px-20 px-0 flex justify-bletween flex-col">
+      <div className="md:px-20 px-0 flex justify-bletween flex-col dark:bg-gradient-to-br dark:from-[#00111A] dark:to-[#00283D]">
         <div className=" flex flex-col w-full h-screen md:flex-row justify-around">
-          <div className="md:w-1/2 w-full md:h-screen flex items-center">
+          <div className="w-full h-1/2 md:w-1/2 md:h-screen flex items-center">
             <Hero />
           </div>
-          <div className="w-full md:h-screen md:w-1/2 flex items-center justify-center">
-            <Canvas>
+          <div className="w-full h-1/2 md:h-screen md:w-1/2 flex items-center justify-center">
+            <Canvas >
               <ambientLight intensity={0.8} />
               <directionalLight intensity={0.4} position={[0, 0, 1]} />
-              <Carpincho />
+              <Center>
+                <Carpincho rotation={[Math.PI / 12, (5 / 4) * Math.PI, 0]} scale={1.5} />
+              </Center>
               <OrbitControls />
             </Canvas>
           </div>
@@ -32,7 +34,7 @@ function App() {
           p
         </div>
       </div>
-      </>
+    </>
   )
 }
 

@@ -4,7 +4,6 @@ Command: npx gltfjsx@6.1.3 ../../assets/Carpincho3D.gltf -T -t -o Carpincho3D
 */
 
 import * as THREE from 'three'
-import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 
@@ -67,7 +66,7 @@ type GLTFResult = GLTF & {
 }
 
 export function Model(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('/Carpincho3D.gltf') as unknown as GLTFResult
+  const { nodes } = useGLTF('/Carpincho3D.gltf') as unknown as GLTFResult
   return (
     <group {...props} dispose={null}>
       <group position={[-0.25, 1.75, 0]}>
