@@ -1,7 +1,7 @@
 
 const Hero = () => {
   return (
-    <div className="pt-12 lg:pt-0  flex w-full justify-center items-center">
+    <div className="flex w-full justify-center items-center">
       <div>
         <h4 className="pl-[4px] font-extrabold text-1xl lg:text-2xl mt-2">Hi, I'm</h4>
         <h1 className="overflow-hidden mt-2 font-extrabold text-transparent text-6xl lg:text-8xl bg-clip-text bg-gradient-to-r from-[#FB8500] to-[#d62828]">Ezequiel</h1>
