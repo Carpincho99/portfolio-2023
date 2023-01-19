@@ -67,6 +67,7 @@ type GLTFResult = GLTF & {
 
 export function Model(props: JSX.IntrinsicElements['group']) {
   const { nodes } = useGLTF('/Carpincho3D.gltf') as unknown as GLTFResult
+
   return (
     <group {...props} dispose={null}>
       <group position={[-0.25, 1.75, 0]}>
