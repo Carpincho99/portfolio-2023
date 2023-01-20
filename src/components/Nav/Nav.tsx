@@ -10,7 +10,7 @@ const Nav = () => (
         ))
       }
     </ul>
-    <div className="bg-[#D62828] h-28 w-[2px] sticky "></div>
+    <div className="bg-[#D62828] h-24 w-[2px] sticky "></div>
   </div>
 
 )
