@@ -19,21 +19,25 @@ import Figma from './svgIcons/Figma'
 const Skills = () => {
   const SkillTitles = [
     {
+      id: 'basics',
       title: 'Basics',
       icons: [Html, Css, Js, Typescript],
       iconsTitle: ['Html', 'Css', 'Javascript', 'Typescript'],
     },
     {
+      id: 'front',
       title: 'FrontEnd Frameworks',
       icons: [React, Svelte],
       iconsTitle: ['ReactJs', 'Svelte'],
     },
     {
+      id: 'css',
       title: 'Css Frameworks',
       icons: [Tailwind, Bootstrap, Material, Saas],
       iconsTitle: ['Tailwind', 'Bootstrap', 'Material Ui', 'Saas'],
     },
     {
+      id: 'misc',
       title: 'Miscellaneous',
       icons: [Three, Git, Vite, Webpack, Linux, Figma],
       iconsTitle: ['ThreeJs', 'Git', 'Vite', 'WebPack', 'Linux', 'Figma'],
@@ -58,7 +62,7 @@ const Skills = () => {
       >
         {SkillTitles.map((section, i) => {
           return (
-            <>
+            <div key={section.id}>
               <h2
                 className={`${
                   i === 0 ? 'mt-5' : 'mt-0'
@@ -70,6 +74,7 @@ const Skills = () => {
                 {section.icons.map((Icon, i) => {
                   return (
                     <div
+                      key={Icon.name}
                       className={`${
                         i === 0 ? 'md:mr-3 md:ml-0 mx-6' : 'mx-6'
                       } flex flex-col justify-center items-center my-5`}
@@ -82,7 +87,7 @@ const Skills = () => {
                   )
                 })}
               </div>
-            </>
+            </div>
           )
         })}
       </div>
