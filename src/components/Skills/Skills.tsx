@@ -62,7 +62,7 @@ const Skills = () => {
       >
         {SkillTitles.map((section, i) => {
           return (
-            <div key={section.id}>
+            <div key={section.id} className="w-full">
               <h2
                 className={`${
                   i === 0 ? 'mt-5' : 'mt-0'
