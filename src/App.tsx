@@ -1,9 +1,11 @@
 import { Center, OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { Model as Carpincho, Nav } from './components'
+import Contact from './components/Contact/Contact'
 import Hero from './components/Hero/Hero'
 import Skills from './components/Skills/Skills'
 import Social from './components/Social/Social'
+import Work from './components/Work/Work'
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         </div>
         <div>
         <Skills />
+        <Work />
+        <Contact />
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pellentesque eleifend eros ac fringilla. Quisque eget metus sed velit porta eleifend eget at justo. Nunc gravida viverra magna, in sagittis mi tincidunt non. Nunc vel urna nisl. Morbi tincidunt mauris ac congue dapibus. Proin est ante, lacinia vitae semper id, cursus vel velit. Sed euismod nibh eu ex egestas, quis sagittis lorem dapibus.
           Pellentesque fermentum, nibh at facilisis facilisis, est libero varius quam, eget imperdiet lacus dolor quis dui. Donec velit ante, pellentesque eu turpis ac, porta vulputate odio. Etiam leo massa, bibendum eu eros quis, dapibus auctor purus. Sed pulvinar aliquet eleifend. Cras ac sapien vel dolor sollicitudin pulvinar. Vestibulum libero purus, iaculis et ultrices sit amet, cursus eu lorem. Nulla nec tristique felis, at vehicula mi.
           Suspendisse ullamcorper venenatis tellus, quis congue velit gravida sit amet. Nulla at viverra dolor, vitae viverra velit. Sed dolor ligula, placerat euismod nisi non, porta placerat est. Proin id maximus erat, vel posuere massa. Phasellus et malesuada massa. Nunc posuere ligula non aliquet suscipit. Curabitur cursus non elit quis convallis. Sed in congue mauris. Sed finibus tristique imperdiet. Nullam eget risus ultricies libero iaculis ultrices. Morbi fringilla malesuada pulvinar. Sed bibendum nulla dui, vel lacinia urna bibendum at. Phasellus leo erat, tincidunt id tempor eget, euismod ac odio.
