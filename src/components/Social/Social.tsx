@@ -1,9 +1,12 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { FaGithubSquare, FaInstagramSquare, FaLinkedin } from 'react-icons/fa'
 import { MdDarkMode, MdLightMode } from 'react-icons/md'
+import { useDispatch } from 'react-redux'
+import { enterButton } from '../../app/store'
 
 const Social = () => {
   const [theme, setTheme] = useState(localStorage.theme)
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (

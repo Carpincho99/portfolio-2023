@@ -15,8 +15,13 @@ import Linux from './svgIcons/Linux'
 import Webpack from './svgIcons/Webpack'
 import Saas from './svgIcons/Saas'
 import Figma from './svgIcons/Figma'
+import { enterText, leaveText } from '../../app/store'
+import { useDispatch } from 'react-redux'
 
 const Skills = () => {
+
+  const dispatch = useDispatch();
+
   const SkillTitles = [
     {
       id: 'basics',
@@ -47,10 +52,10 @@ const Skills = () => {
   return (
     <div className="mt-5 flex flex-col md:flex-row w-full justify-center items-start">
       <div className="w-full md:w-1/2">
-        <h2 className="text-transparent bg-clip-text bg-[#F77F00] font-extrabold text-5xl overflow-hidden">
+        <h2 onMouseEnter={()=>dispatch(enterText())} onMouseLeave={()=>dispatch(leaveText())} className="text-transparent bg-clip-text bg-[#F77F00] font-extrabold text-5xl overflow-hidden">
           Skills
         </h2>
-        <p className="mt-5 pr-0 md:pr-4 text-lg dark:text-white">
+        <p className="mt-5 pr-0 md:pr-4 text-lg text-black dark:text-white">
           I mainly use ReactJs and Tailwind to build beautiful website, like this portfolio. Also, I
           almost complete learning Svelte (which is an awesome framework!). Some other tools that I am constantly
           working with are Git/GitHub (for version control) and Linux, like my daily OS.
