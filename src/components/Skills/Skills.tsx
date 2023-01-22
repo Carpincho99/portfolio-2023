@@ -52,7 +52,7 @@ const Skills = () => {
         </h2>
         <p className="mt-5 pr-0 md:pr-4 text-lg dark:text-white">
           I mainly use ReactJs and Tailwind to build beautiful website, like this portfolio. Also, I
-          am learning Svelte (which is an awesome framework!). Some other tools that I am constantly
+          almost complete learning Svelte (which is an awesome framework!). Some other tools that I am constantly
           working with are Git/GitHub (for version control) and Linux, like my daily OS.
         </p>
       </div>

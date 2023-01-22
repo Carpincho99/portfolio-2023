@@ -1,15 +1,20 @@
 import { Center, OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
+import { useState } from 'react'
 import { Model as Carpincho, Nav } from './components'
 import Contact from './components/Contact/Contact'
+import Cursor from './components/Cursor/Cursor'
 import Hero from './components/Hero/Hero'
 import Skills from './components/Skills/Skills'
 import Social from './components/Social/Social'
 import Work from './components/Work/Work'
 
+
 function App() {
+
   return (
     <>
+      <Cursor />
       <Nav />
       <Social />
       <div className="md:px-20 px-8 flex justify-bletween flex-col dark:bg-gradient-to-br dark:from-[#00111A] dark:to-[#00283D]">
@@ -18,7 +23,7 @@ function App() {
             <Hero />
           </div>
           <div className="w-full h-1/2 md:h-screen md:w-1/2 flex items-center justify-center">
-            <Canvas >
+            <Canvas dpr={[1, 2]} >
               <ambientLight intensity={0.8} />
               <directionalLight intensity={0.4} position={[0, 0, 1]} />
               <Center>
