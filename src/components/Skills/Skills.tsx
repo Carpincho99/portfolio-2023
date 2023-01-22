@@ -15,6 +15,7 @@ import Linux from './svgIcons/Linux'
 import Webpack from './svgIcons/Webpack'
 import Saas from './svgIcons/Saas'
 import Figma from './svgIcons/Figma'
+import Redux from './svgIcons/Redux'
 
 const Skills = () => {
   const SkillTitles = [
@@ -39,8 +40,8 @@ const Skills = () => {
     {
       id: 'misc',
       title: 'Miscellaneous',
-      icons: [Three, Git, Vite, Webpack, Linux, Figma],
-      iconsTitle: ['ThreeJs', 'Git', 'Vite', 'WebPack', 'Linux', 'Figma'],
+      icons: [Three, Git, Vite, Webpack, Linux, Redux],
+      iconsTitle: ['ThreeJs', 'Git', 'Vite', 'WebPack', 'Linux', 'Redux'],
     },
   ]
 
