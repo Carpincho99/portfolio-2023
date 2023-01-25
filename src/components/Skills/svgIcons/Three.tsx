@@ -1,4 +1,3 @@
-
 const Three = () => {
   return (
 <svg fill="none" strokeLinecap="square" strokeMiterlimit="10" version="1.1" viewBox="0 0 226.77 226.77" xmlns="http://www.w3.org/2000/svg">

@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { BiMailSend } from 'react-icons/bi'
 import styles from './Hero.module.css'
 
@@ -9,12 +10,16 @@ const Hero = () => {
         <h1 className={`${styles.animatedGrad} overflow-hidden mt-2 font-extrabold text-transparent text-6xl lg:text-8xl bg-clip-text`}>Ezequiel</h1>
         <h2 className="mt-2 pl-[4px] font-extrabold text-2xl lg:text-4xl overflow-hidden dark:text-white">FrontEnd Developer Jr.</h2>
         <a href="#contact">
-          <button className={`${styles.animatedGrad} mt-8 ml-[4px] px-3 py-1 dark:text-white rounded-full flex flex-row items-center drop-shadow-md hover:drop-shadow-xl`}>
+          <motion.button
+          whileHover={{scale: 1.1}}
+          whileTap={{scale:0.9}}
+            className={`${styles.animatedGrad} mt-8 ml-[4px] px-3 py-1 dark:text-white rounded-full flex flex-row items-center drop-shadow-md hover:drop-shadow-xl`}
+          >
             <BiMailSend className="px-2" size={40} />
             <span className="pr-2 font-bold">
               Contact me
             </span>
-          </button>
+          </motion.button>
         </a>
       </div>
     </div>

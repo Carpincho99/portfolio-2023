@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { FaGithubSquare, FaInstagramSquare, FaLinkedin } from 'react-icons/fa'
 import { MdDarkMode, MdLightMode } from 'react-icons/md'
@@ -8,8 +9,10 @@ const Social = () => {
   useEffect(() => {
     if (localStorage.theme === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.documentElement.classList.add('dark');
+      setTheme('dark')
     } else {
       document.documentElement.classList.remove('dark');
+      setTheme('light')
     }
 
     return (() => { localStorage.removeItem('theme'); })
@@ -27,12 +30,24 @@ const Social = () => {
   return (
     <div className="z-50 h-screen hidden fixed md:flex flex-col justify-between items-center bottom-0 left-0  w-20">
       <div className="flex items-center">
-        <button
-          onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-          className="mt-5 p-1 bg-[#F77F00] rounded drop-shadow-md hover:drop-shadow-xl"
-        >
-          {theme == 'light' ? <MdDarkMode color="#FFFF" size={20} /> : <MdLightMode size={20} />}
-        </button>
+        {
+          theme === 'dark'
+            ?
+            <motion.button
+              onClick={() => setTheme('light')}
+              className="mt-5 p-1 bg-[#F77F00] rounded drop-shadow-md hover:drop-shadow-xl"
+            >
+              <MdLightMode size={20} />
+            </motion.button>
+            :
+            <motion.button
+              onClick={() => setTheme('dark')}
+              className="mt-5 p-1 bg-[#F77F00] rounded drop-shadow-md hover:drop-shadow-xl"
+            >
+              <MdDarkMode color="#FFFF" size={20} />
+            </motion.button>
+
+        }
       </div>
       <div className="flex items-center flex-col">
         <div>

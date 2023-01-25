@@ -6,7 +6,6 @@ import Hero from './components/Hero/Hero'
 import Skills from './components/Skills/Skills'
 import Social from './components/Social/Social'
 import Work from './components/Work/Work'
-import ThemeContexWrapper from './context/ThemeContextWrapper'
 
 function App() {
   return (
@@ -18,8 +17,8 @@ function App() {
             <div className="w-full h-1/2 md:w-1/2 md:h-screen flex items-center">
               <Hero />
             </div>
-            <div className="w-full h-1/2 md:h-screen md:w-1/2 flex items-center justify-center">
-              <Canvas className="cursor-all-scroll">
+            <div className="w-full mb-16 h-1/2 md:h-screen md:w-1/2 flex items-center justify-center">
+              <Canvas className="cursor-all-scroll scale-125 md:scale-100">
                 <ambientLight intensity={0.8} />
                 <directionalLight intensity={0.4} position={[0, 0, 1]} />
                 <Center>

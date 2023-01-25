@@ -17,6 +17,7 @@ import Saas from './svgIcons/Saas'
 import Figma from './svgIcons/Figma'
 import Redux from './svgIcons/Redux'
 import Inkscape from './svgIcons/Inkscape'
+import { motion } from 'framer-motion'
 
 const Skills = () => {
   const SkillTitles = [
@@ -47,22 +48,24 @@ const Skills = () => {
   ]
 
   return (
-    <section id="skill">
-    <div>
-      <h2 className="text-transparent bg-clip-text bg-[#F77F00] font-extrabold text-5xl overflow-hidden">
-        Skills
-      </h2>
-    </div>
+    <section id="skill" className="mt-9 md:mt-5">
+      <motion.div initial={{ x: "-50vw" }} whileInView={{ x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: false }}>
+        <h2 className="text-transparent bg-clip-text bg-[#F77F00] font-extrabold text-5xl overflow-hidden">
+          Skills
+        </h2>
+      </motion.div>
       <div className="mt-5 flex flex-col md:flex-row w-full justify-center items-start">
-        <div className="w-full md:w-1/2">
-          <p className="pr-0 md:pr-4 text-lg dark:text-white">
+        <div
+          className="w-full md:w-1/3">
+          <p className="mr-6 text-justify md:text-left text-xl dark:text-white">
             I mainly use ReactJs and Tailwind to build beautiful website, like this portfolio. Also, I
             am learning Svelte (which is an awesome framework!). Some other tools that I am constantly
             working with are Git/GitHub (for version control) and Linux as my daily OS.
           </p>
         </div>
-        <div
-          className={`${styles.skillTitle} w-full md:w-3/4 mt-5 md:mt-0 drop-shadow-2xl
+        <motion.div
+          initial={{ x: "50vw" }} whileInView={{ x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: false }}
+          className={`${styles.skillTitle} w-full md:w-2/3 mt-5 md:mt-0 drop-shadow-2xl
         dark:text-white flex flex-col items-center dark:bg-[#00141F] bg-[#EAE2B7] rounded-[1rem]`}
         >
           {SkillTitles.map((section, i) => {
@@ -91,9 +94,9 @@ const Skills = () => {
               </div>
             )
           })}
-        </div>
+        </motion.div>
       </div>
-      </section>
+    </section>
   )
 }
 
