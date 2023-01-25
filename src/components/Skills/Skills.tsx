@@ -16,6 +16,7 @@ import Webpack from './svgIcons/Webpack'
 import Saas from './svgIcons/Saas'
 import Figma from './svgIcons/Figma'
 import Redux from './svgIcons/Redux'
+import Inkscape from './svgIcons/Inkscape'
 
 const Skills = () => {
   const SkillTitles = [
@@ -40,13 +41,13 @@ const Skills = () => {
     {
       id: 'misc',
       title: 'Miscellaneous',
-      icons: [Three, Git, Vite, Webpack, Linux, Redux],
-      iconsTitle: ['ThreeJs', 'Git', 'Vite', 'WebPack', 'Linux', 'Redux'],
+      icons: [Three, Git, Vite, Webpack, Linux, Redux, Figma, Inkscape],
+      iconsTitle: ['ThreeJs', 'Git', 'Vite', 'WebPack', 'Linux', 'Redux', 'Figma', 'Inkscape'],
     },
   ]
 
   return (
-    <>
+    <section id="skill">
     <div>
       <h2 className="text-transparent bg-clip-text bg-[#F77F00] font-extrabold text-5xl overflow-hidden">
         Skills
@@ -57,7 +58,7 @@ const Skills = () => {
           <p className="pr-0 md:pr-4 text-lg dark:text-white">
             I mainly use ReactJs and Tailwind to build beautiful website, like this portfolio. Also, I
             am learning Svelte (which is an awesome framework!). Some other tools that I am constantly
-            working with are Git/GitHub (for version control) and Linux, like my daily OS.
+            working with are Git/GitHub (for version control) and Linux as my daily OS.
           </p>
         </div>
         <div
@@ -91,7 +92,8 @@ const Skills = () => {
             )
           })}
         </div>
-      </div></>
+      </div>
+      </section>
   )
 }
 

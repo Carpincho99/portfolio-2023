@@ -6,7 +6,11 @@ const Nav = () => (
     <ul className="py-3 sticky">
       {
         NavLinks.map((link) => (
-          <li key={link.id} className="inline py-3 text-[#D62828] font-bold">{link.text}</li>
+          <li key={link.id} className="inline py-3 text-[#D62828] font-bold">
+            <a href={`#${link.id}`}>
+              {link.text}
+            </a>
+          </li>
         ))
       }
     </ul>
