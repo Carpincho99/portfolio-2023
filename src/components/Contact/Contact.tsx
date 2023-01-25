@@ -3,14 +3,13 @@ import carpincho from '../../assets/contactCarpincho.jpeg'
 
 const Contact = () => {
   return (
-    <section id="contact">
+    <section id="contact" className="mt-12">
       <div>
         <h2 className="text-transparent bg-clip-text bg-[#F77F00] font-extrabold text-5xl overflow-hidden">
           Contact Me
         </h2>
       </div>
-      <div className="w-full flex flex-col md:flex-row">
-
+      <div className="w-full mt-5 flex flex-col md:flex-row">
         <div className="p-3 w-full md:w-1/2 bg-[#EAE2B7] dark:bg-[#00141F] drop-shadow-2xl rounded-[1rem] items-center ">
           <form className={`${styles.form} px-4 flex flex-col items-center dark:text-white`}>
             <div className="m-2 w-full relative text-start">

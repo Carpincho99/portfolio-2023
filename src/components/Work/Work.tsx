@@ -1,14 +1,29 @@
-import { useContext } from 'react';
 import portfolioDark from '../../assets/projectPortfolio.png'
 import portfolioLight from '../../assets/projectPortfolioLight.png'
-import ThemeContext from '../../context/ThemeContext';
 import styles from './Work.module.css'
 import Three from '../../components/Skills/svgIcons/Three'
 import { FaGithub, FaGithubSquare, FaLink, FaReact } from 'react-icons/fa'
 import { SiTailwindcss } from 'react-icons/si'
+import { useEffect, useState } from 'react'
 
 const Work = () => {
-  const { currentTheme, changeCurrentTheme } = useContext(ThemeContext);
+  const [isDark, setIsDark] = useState(document.documentElement.classList.contains('dark'))
+
+  useEffect(() => {
+    var observer = new MutationObserver(function(event) {
+      setIsDark(document.documentElement.classList.contains('dark'))
+    })
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class'],
+      childList: false,
+      characterData: false
+    })
+
+    return () => {
+    }
+  }, [])
 
   return (
     <section id="work">
@@ -19,7 +34,7 @@ const Work = () => {
         <div className="">
           <div className={`${styles.imgBorder} rounded-2xl p-1 drop-shadow-2xl`}>
             {
-              currentTheme === 'dark'
+              isDark
                 ?
                 <img src={portfolioLight} alt="" width={700} className="rounded-xl" />
                 :
