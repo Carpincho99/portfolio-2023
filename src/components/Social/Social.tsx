@@ -4,16 +4,40 @@ import { MdDarkMode, MdLightMode } from 'react-icons/md'
 import ThemeContext from '../../context/ThemeContext'
 
 const Social = () => {
-  const { currentTheme, changeCurrentTheme } = useContext(ThemeContext);
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light')
+
+  useEffect(() => {
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark')
+      localStorage.theme = 'dark'
+    } else {
+      document.documentElement.classList.remove('dark')
+      localStorage.theme = 'light'
+    }
+  }, [])
+
+  useEffect(() => {
+    if (theme === 'light') {
+      document.body.classList.remove('dark');
+      localStorage.theme = 'light'
+    }
+    else {
+      document.body.classList.add('dark');
+      localStorage.theme = 'dark'
+    }
+  }, [theme])
 
   return (
     <div className="z-50 h-screen hidden fixed md:flex flex-col justify-between items-center bottom-0 left-0  w-20">
       <div className="flex items-center">
         <button
-          onClick={() => changeCurrentTheme(currentTheme == 'light' ? 'dark' : 'light')}
+          onClick={() => setTheme(theme == 'light' ? 'dark' : 'light')}
           className="mt-5 p-1 bg-[#F77F00] rounded drop-shadow-md hover:drop-shadow-xl"
         >
-          {currentTheme == 'light' ? <MdDarkMode color="#FFFF" size={20} /> : <MdLightMode size={20} />}
+          {theme == 'light' ? <MdDarkMode color="#FFFF" size={20} /> : <MdLightMode size={20} />}
         </button>
       </div>
       <div className="flex items-center flex-col">

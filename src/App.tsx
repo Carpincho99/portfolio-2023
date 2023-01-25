@@ -11,7 +11,6 @@ import ThemeContexWrapper from './context/ThemeContextWrapper'
 function App() {
   return (
     <>
-      <ThemeContexWrapper>
         <Nav />
         <Social />
         <div className="md:px-20 px-8 antialiased flex justify-bletween flex-col bg-gradient-to-br from-white to-[#E0F4FF] dark:from-[#00111A] dark:to-[#00283D]">
@@ -20,7 +19,7 @@ function App() {
               <Hero />
             </div>
             <div className="w-full h-1/2 md:h-screen md:w-1/2 flex items-center justify-center">
-              <Canvas >
+              <Canvas className="cursor-all-scroll">
                 <ambientLight intensity={0.8} />
                 <directionalLight intensity={0.4} position={[0, 0, 1]} />
                 <Center>
@@ -36,7 +35,6 @@ function App() {
             <Contact />
           </div>
         </div>
-      </ThemeContexWrapper>
     </>
   )
 }
