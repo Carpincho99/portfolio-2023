@@ -41,9 +41,9 @@ const Work = () => {
             {
               isDark
                 ?
-                <img src={portfolioLight} alt="" width={700} className="rounded-t-xl md:rounded-xl" />
+                <img src={portfolioLight} alt="" width={700} className="rounded-t-xl md:rounded-b-xl" />
                 :
-                <img src={portfolioDark} alt="" width={700} className="rounded-t-xl md:rounded-xl" />
+                <img src={portfolioDark} alt="" width={700} className="rounded-t-xl md:rounded-b-xl" />
             }
             <div className="md:hidden w-full flex flex-col dark:bg-[#00141F] bg-[#EAE2B7] rounded-b-2xl p-3 dark:text-white">
               <div className="flex items-center justify-start">

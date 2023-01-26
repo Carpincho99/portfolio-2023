@@ -42,7 +42,7 @@ const Contact = () => {
             </motion.button>
           </form>
         </motion.div>
-        <div className="w-full md:w-1/2">
+        <div className="pl-10 md:pt-10 w-full md:w-1/2">
           <div className="flex flex-col items-center justify-center mt-10 md:mt-0">
           <Carpincho2D />
           </div>
