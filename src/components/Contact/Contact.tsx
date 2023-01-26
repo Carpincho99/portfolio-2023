@@ -5,13 +5,16 @@ import { motion } from 'framer-motion'
 const Contact = () => {
   return (
     <section id="contact" className="mt-12">
-      <div>
+      <motion.div initial={{x: "-50vw"}} whileInView={{x: 0}} transition={{duration: 0.5}}>
         <h2 className="text-transparent bg-clip-text bg-[#F77F00] font-extrabold text-5xl overflow-hidden">
           Contact Me
         </h2>
-      </div>
+      </motion.div>
       <div className="w-full mt-5 flex flex-col md:flex-row">
-        <div className="p-3 w-full md:w-1/2 bg-[#EAE2B7] dark:bg-[#00141F] drop-shadow-2xl rounded-[1rem] items-center ">
+        <motion.div 
+        initial={{x: "-45vw"}} whileInView={{x: 0}} transition={{duration: 0.5}}
+        className="p-3 w-full md:w-1/2 bg-[#EAE2B7] dark:bg-[#00141F] drop-shadow-2xl rounded-[1rem] items-center"
+        >
           <form className={`${styles.form} px-4 flex flex-col items-center dark:text-white`}>
             <div className="m-2 w-full relative text-start">
               <label htmlFor="" className="font-extrabold text-2xl overflow-hidden">Name</label>
@@ -37,7 +40,7 @@ const Contact = () => {
               Send
             </motion.button>
           </form>
-        </div>
+        </motion.div>
         <div className="w-full md:w-1/2">
           <div className="flex items-center justify-center">
             <img src={carpincho} alt="" width={200} height={200} className="mt-12" />

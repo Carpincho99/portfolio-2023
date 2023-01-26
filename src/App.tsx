@@ -46,15 +46,20 @@ function App() {
               <Center>
                 <Carpincho rotation={[0, (5 / 4) * Math.PI, 0]} scale={isMobile ? 1.8 : 1.5} />
               </Center>
-              <OrbitControls enableZoom={false} autoRotate={true} enablePan={false} enableRotate={isDobleTouching} />
+              <OrbitControls enableZoom={false} autoRotate={true} enablePan={false} enableRotate={isMobile ? isDobleTouching : true} />
             </Canvas>
             {
-              isDobleTouching ||
-              <div className="w-full h-full absolute top-0 left-0">
-              </div>
+              isMobile && (
+                isDobleTouching ||
+                <div className="w-full h-full absolute top-0 left-0">
+                </div>
+              )
             }
           </div>
-          <p className="text-sm dark:text-gray-400">* Use tow fingers over the 3D model to rotate it</p>
+          {
+            isMobile &&
+            <p className="text-sm dark:text-gray-400">* Use tow fingers over the 3D model to rotate it</p>
+          }
         </div>
         <div>
           <Skills />
