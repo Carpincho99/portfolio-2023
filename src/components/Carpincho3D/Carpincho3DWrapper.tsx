@@ -46,7 +46,7 @@ const Carpincho3DWrapper = () => {
       </div>
       {
         isMobile &&
-        <p className="text-sm dark:text-gray-400">* Use tow fingers over the 3D model to rotate it</p>
+        <p className="text-sm dark:text-gray-400">* Use two fingers over the 3D model to rotate it</p>
       }
     </>
   )

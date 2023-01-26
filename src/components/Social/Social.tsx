@@ -28,7 +28,7 @@ const Social = () => {
   }, [theme])
 
   return (
-    <div className="z-50 h-screen hidden fixed md:flex flex-col justify-between items-center bottom-0 left-0  w-20">
+    <div className="z-50 h-screen hidden fixed md:flex flex-col justify-between items-center top-0 left-0  w-20">
       <div className="flex items-center">
         {
           theme === 'dark'

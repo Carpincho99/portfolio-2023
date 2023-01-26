@@ -1,0 +1,48 @@
+.eye{
+  background: #FFFF;
+  position: absolute;
+  display: inline-block;
+  top: 83px;
+  left: 187px;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  z-index: 0;
+  background: #FFFF;
+}
+.eye::before{
+  content: '';
+  margin: 2px;
+  background: #000;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.eye::after{
+  content: '';
+  margin: 2px;
+  background: #FFF;
+  position: absolute;
+  top: 3.5px;
+  left: 1px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  z-index: 50;
+}
+
+.coverEyes {
+background: #FFFF;
+  position: absolute;
+  display: inline-block;
+  top: 83px;
+  left: 187px;
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  z-index: 0;
+  background: #FFFF;
+}

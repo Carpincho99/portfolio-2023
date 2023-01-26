@@ -48,16 +48,16 @@ const Skills = () => {
   ]
 
   return (
-    <section id="skill" className="mt-9 md:mt-5">
+    <section id="skill" className="mt-5 md:mt-5">
       <motion.div initial={{ x: "-50vw" }} whileInView={{ x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
         <h2 className="text-transparent bg-clip-text bg-[#F77F00] font-extrabold text-5xl overflow-hidden">
           Skills
         </h2>
       </motion.div>
       <div className="mt-5 flex flex-col md:flex-row w-full justify-center items-start">
-        <motion.div initial={{x: "-35vw"}} whileInView={{x: 0}} transition={{duration: 0.5}}
+        <motion.div initial={{x: "-35vw"}} whileInView={{x: 0}} transition={{duration: 0.5}} viewport={{once: true}}
           className="w-full md:w-1/3">
-          <p className="mr-6 text-justify md:text-left text-xl dark:text-white">
+          <p className="md:mr-6 mr-0 text-justify md:text-left text-xl dark:text-white">
             I mainly use ReactJs and Tailwind to build beautiful website, like this portfolio. Also, I
             am learning Svelte (which is an awesome framework!). Some other tools that I am constantly
             working with are Git/GitHub (for version control) and Linux as my daily OS.

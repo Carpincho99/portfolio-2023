@@ -35,7 +35,7 @@ const Work = () => {
       <div className="w-full relative flex flex-col justify-center items-center mt-5">
         <div className="">
           <motion.div 
-          initial={{x: "55vw"}} whileInView={{x: 0}} transition={{duration: 0.5}} viewport={{once: false}}
+          initial={{x: "55vw"}} whileInView={{x: 0}} transition={{duration: 0.5}} viewport={{once: true}}
           className={`${styles.imgBorder} rounded-2xl p-1 drop-shadow-2xl`}
           >
             {
