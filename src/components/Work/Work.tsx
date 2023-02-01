@@ -27,7 +27,7 @@ const Work = () => {
 
   return (
     <section id="work" className="mt-5">
-      <motion.h2 initial={{ x: "-50vw" }} whileInView={{ x: 0 }} transition={{ duration: 0.5 }}
+      <motion.h2 initial={{ x: "-50vw" }} whileInView={{ x: 0 }} transition={{ duration: 0.5 }} viewport={{once: true}}
         className="text-transparent bg-clip-text bg-[#F77F00] font-extrabold text-5xl overflow-hidden"
       >
         Work
@@ -35,7 +35,7 @@ const Work = () => {
       <div className="w-full relative flex flex-col justify-center items-center mt-5">
         <div className="">
           <motion.div 
-          initial={{x: "55vw"}} whileInView={{x: 0}} transition={{duration: 0.5}} 
+          initial={{x: "55vw"}} whileInView={{x: 0}} transition={{duration: 0.5}}  viewport={{once: true}}
           className={`${styles.imgBorder} rounded-2xl p-1`}
           >
             {
@@ -61,7 +61,7 @@ const Work = () => {
             </div>
           </motion.div>
           <motion.div
-            initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{delay: 0.5}}
+            initial={{opacity: 0}} whileInView={{opacity: 1}} transition={{delay: 0.5}} viewport={{once: true}}
             className={`${styles.overlay} hidden md:flex flex-col absolute w-80 text-end dark:bg-[#00141F] bg-[#EAE2B7] rounded-2xl p-3 drop-shadow-2xl bg-opacity-90 dark:bg-opacity-90 dark:text-white`}
           >
             <div className="flex items-center justify-end">

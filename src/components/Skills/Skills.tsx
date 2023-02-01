@@ -49,13 +49,13 @@ const Skills = () => {
 
   return (
     <section id="skill" className="mt-5 md:mt-5">
-      <motion.div initial={{ x: "-50vw" }} whileInView={{ x: 0 }} transition={{ duration: 0.5 }}>
+      <motion.div initial={{ x: "-50vw" }} whileInView={{ x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
         <h2 className="text-transparent bg-clip-text bg-[#F77F00] font-extrabold text-5xl overflow-hidden">
           Skills
         </h2>
       </motion.div>
       <div className="mt-5 flex flex-col md:flex-row w-full justify-center items-start">
-        <motion.div initial={{ x: "-35vw" }} whileInView={{ x: 0 }} transition={{ duration: 0.5 }}
+        <motion.div initial={{ x: "-35vw" }} whileInView={{ x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}
           className="w-full md:w-1/3">
           <p className="md:mr-6 mr-0 text-justify md:text-left text-xl dark:text-white">
             I mainly use ReactJs and Tailwind to build beautiful website, like this portfolio. Also, I
@@ -64,7 +64,7 @@ const Skills = () => {
           </p>
         </motion.div>
         <motion.div
-          initial={{ x: "50vw" }} whileInView={{ x: 0 }} transition={{ duration: 0.5 }}
+          initial={{ x: "50vw" }} whileInView={{ x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}
           className={`${styles.skillTitle} w-full md:w-2/3 mt-5 md:mt-0 drop-shadow-2xl
         dark:text-white flex flex-col items-center dark:bg-[#00141F] bg-[#EAE2B7] rounded-[1rem]`}
         >

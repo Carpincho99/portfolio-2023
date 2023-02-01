@@ -38,7 +38,7 @@ const Carpincho2D = () => {
 
   return (
 
-    <div className="relative">
+    <div className=" flex items-center justify-center relative">
       {
         isMobile
           ?
