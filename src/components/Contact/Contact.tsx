@@ -5,7 +5,7 @@ import Carpincho2D from './Carpincho2D'
 
 const Contact = () => {
   return (
-    <section id="contact" className="mt-12">
+    <section id="contact" className="mt-12 mb-5">
       <motion.div initial={{ x: "-50vw" }} whileInView={{ x: 0 }} transition={{ duration: 0.5 }} viewport={{once: true}}>
         <h2 className="text-transparent bg-clip-text bg-[#F77F00] font-extrabold text-5xl overflow-hidden">
           Contact Me

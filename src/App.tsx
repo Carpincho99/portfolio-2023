@@ -1,4 +1,6 @@
 import { Carpincho3DWrapper, Contact, Hero, Nav, Skills, Social, Work } from './components'
+import AboutMe from './components/AboutMe/AboutMe'
+import Educ from './components/Educ/Educ'
 
 function App() {
   return (
@@ -13,7 +15,9 @@ function App() {
           <Carpincho3DWrapper />
         </div>
         <div>
+          <AboutMe />
           <Skills />
+          <Educ />
           <Work />
           <Contact />
         </div>
