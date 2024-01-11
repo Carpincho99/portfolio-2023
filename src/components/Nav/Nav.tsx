@@ -10,13 +10,18 @@ const Nav = () => {
   const [lng, setlng] = useState(navigator.language);
 
   return (<>
-    <div className={`w-8 md:w-20 fixed flex items-center justify-between top-0 right-0 h-screen  z-50 ${styles.textVertical}`}>
-      <div className={'flex items-center'}>
+    <div className={`w-8 md:w-20 fixed flex items-center justify-between flex-col top-0 right-0 h-screen  z-50`}>
+      <div className={`flex items-center ${styles.textVertical}`}>
         <ul className="py-3 sticky">
           {NavLinks.map((link) => (
-            <li key={link.id} className="inline py-3 text-sm md:text-base text-[#D62828] font-bold">
+            <li key={link.id} className="inline-block py-3 text-sm md:text-base text-[#D62828] font-bold">
               <a href={`#${link.id}`}>
-                {link.text}
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  {link.text}
+                </motion.div>
               </a>
             </li>
           ))}
@@ -26,7 +31,9 @@ const Nav = () => {
       <div>
         <motion.button
           onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'es' : 'en')}
-          className="-rotate-90 mb-5 px-1 py-2 h-[40px] w-[40px] bg-[#D62828] font-bold  text-lg text-white rounded drop-shadow-md hover:drop-shadow-xl dark:text-[#00283D]"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          className="mb-5 h-[40px] w-[40px] bg-[#D62828] font-bold text-lg text-white rounded drop-shadow-md hover:drop-shadow-xl dark:text-[#00283D]"
         >
           {i18n.language === 'en' ? 'es' : 'en'}
         </motion.button>

@@ -9,7 +9,7 @@ const Skills = () => {
 const [tabSelectedIdx, setTabSelectedIdx] = useState(0);
 
   return (
-    <section id="skill" className="mt-5 md:mt-5">
+    <section id="skill" className="mt-5 md:mt-12">
       <motion.div initial={{ x: "-50vw" }} whileInView={{ x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
         <h2 className="text-transparent bg-clip-text bg-[#F77F00] font-extrabold text-5xl overflow-hidden">
           Skills
@@ -18,7 +18,7 @@ const [tabSelectedIdx, setTabSelectedIdx] = useState(0);
       <div className="mt-5 flex flex-col md:flex-row w-full justify-center items-start">
         <motion.div initial={{ x: "-35vw" }} whileInView={{ x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}
           className="w-full md:w-1/3">
-          <p className="md:mr-6 mr-0 text-justify md:text-left text-xl dark:text-white">
+          <p className="md:mr-6 mr-0 md:text-left text-xl dark:text-white">
             I mainly use ReactJs and Tailwind to build beautiful website, like this portfolio. Also, I
             am learning Svelte (which is an awesome framework!). Some other tools that I am constantly
             working with are Git/GitHub (for version control) and Linux as my daily OS.
@@ -47,7 +47,7 @@ const [tabSelectedIdx, setTabSelectedIdx] = useState(0);
                         {section.icons.map((Icon, i) => {
                           return (
                             <div
-                              key={Icon.name}
+                              key={i}
                               className={`${i === 0 ? 'md:mr-3 md' : 'mx-6'} flex flex-col justify-center items-center my-5`}
                             >
                               <div className="w-16">

@@ -35,14 +35,16 @@ const Contact = () => {
             <div className="m-2 mt-3 w-[95%] relative text-black">
               <textarea placeholder="Message" className="px-2 py-2 ring-1 ring-gray-300 w-full border-none rounded-md" />
             </div>
-            <button
+            <motion.button
               className="m-2 mt-3 w-full py-2 rounded-lg bg-[#F77F00] font-extrabold border-none text-2xl"
+              whileHover={{scale: 1.05}}
+              whileTap={{scale: 0.9}}
             >
               Send
-            </button>
+            </motion.button>
           </form>
         </motion.div>
-        <div className="md:pl-10 md:pt-10 w-full md:w-1/2 flex items-center justify-center ">
+        <div className="md:pl-10 pt-10 md:pt-0 w-full md:w-1/2 flex items-center justify-center ">
           <Carpincho2D />
         </div>
       </div>

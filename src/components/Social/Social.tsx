@@ -35,6 +35,8 @@ const Social = () => {
           <motion.button
             onClick={() => setTheme('light')}
             className="mt-5 p-1 bg-[#F77F00] rounded drop-shadow-md hover:drop-shadow-xl"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
           >
             <MdLightMode size={25} />
           </motion.button>
@@ -42,6 +44,8 @@ const Social = () => {
           <motion.button
             onClick={() => setTheme('dark')}
             className="mt-5 p-1 bg-[#F77F00] rounded drop-shadow-md hover:drop-shadow-xl"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
           >
             <MdDarkMode color="#FFFF" size={25} />
           </motion.button>}
@@ -51,17 +55,32 @@ const Social = () => {
           <ul>
             <li className="pb-3 drop-shadow-md hover:drop-shadow-xl">
               <a href="">
-                <FaGithubSquare color="#F77F00" size={40} className="" />
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <FaGithubSquare color="#F77F00" size={40} className="" />
+                </motion.div>
               </a>
             </li>
             <li className="pb-3 drop-shadow-md hover:drop-shadow-xl">
               <a href="">
-                <FaLinkedin color="#F77F00" size={40} />
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <FaLinkedin color="#F77F00" size={40} />
+                </motion.div>
               </a>
             </li>
             <li className="pb-3 drop-shadow-md hover:drop-shadow-xl">
               <a href="">
-                <FaInstagramSquare color="#F77F00" size={40} />
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <FaInstagramSquare color="#F77F00" size={40} />
+                </motion.div>
               </a>
             </li>
           </ul>

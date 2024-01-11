@@ -44,3 +44,33 @@ export const SkillTitles = [
     icons: ["ThreeJs", "Git", "Vite", "WebPack", "Linux"]
   },
 ]
+
+export const educTimelineElements = [
+{
+    id: 1,
+    title: "Estudiante Ing. Electrónica",
+    location: "UTN - FRC",
+    description: "Estudios primarios y secuandarios completos",
+    buttonText: "Descargar análitico",
+    date: "2021 - presente",
+    icon: "work"
+  },
+{
+    id: 2,
+    title: "Primario-Secundario",
+    location: "Colegio San José, Bell Ville",
+    description: "Estudios primarios y secuandarios completos",
+    buttonText: "Descargar análitico",
+    date: "2008 - 2020",
+    icon: "school"
+  },
+{
+    id: 3,
+    title: "Argentina Programa",
+    location: "Online",
+    description: "Estudios primarios y secuandarios completos",
+    buttonText: "Descargar certificado",
+    date: "2020 - 2022",
+    icon: "school"
+  },
+]
