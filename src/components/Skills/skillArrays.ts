@@ -18,8 +18,12 @@ import Inkscape from './svgIcons/Inkscape'
 import Dart from './svgIcons/Dart'
 import Flutter from './svgIcons/Flutter'
 import C from './svgIcons/C'
+import Cpp from './svgIcons/Cpp'
+import ASM from './svgIcons/ASM'
 import Latex from './svgIcons/Latex'
 import SolidWorks from './svgIcons/SolidWorks'
+import Verilog from './svgIcons/Verilog'
+import Fusion from './svgIcons/Fusion'
 
 const SkillTitles = [
   {
@@ -58,14 +62,14 @@ const IngSkillTitles = [
   {
     id: 'lowLevel',
     title: 'Microcontrollers',
-    icons: [Css, Css, Js, Typescript],
-    iconsTitle: ['C', 'Cpp', 'Javascript', 'Typescript'],
+    icons: [C, Cpp, ASM],
+    iconsTitle: ['C', 'Cpp', 'Assambley'],
   },
   {
     id: 'hardware',
     title: 'Hardware Description',
-    icons: [Html, Css, Js, Typescript],
-    iconsTitle: ['Html', 'Css', 'Javascript', 'Typescript'],
+    icons: [Verilog],
+    iconsTitle: ['Verilog'],
   },
   {
     id: 'eda',
@@ -76,14 +80,14 @@ const IngSkillTitles = [
   {
     id: 'cad',
     title: 'CAD',
-    icons: [Css, Css, Js, Typescript],
-    iconsTitle: ['SolidWorks', 'Fusion360', 'Javascript', 'Typescript'],
+    icons: [SolidWorks, Fusion],
+    iconsTitle: ['SolidWorks', 'Fusion360'],
   },
   {
     id: 'miss',
     title: 'Miscellaneous',
-    icons: [Linux, Linux, Js, Typescript ,Typescript, Typescript],
-    iconsTitle: ['Latex', 'Linux', 'Spice', 'Multisim', 'Octave', 'Matlab'],
+    icons: [Latex, Linux, Js, Typescript ,Typescript, Typescript],
+    iconsTitle: ['Latex', 'Linux', 'LtSpice', 'Multisim', 'Octave', 'Matlab'],
   },
 ]
 

@@ -43,7 +43,7 @@ const [tabSelectedIdx, setTabSelectedIdx] = useState(0);
                       >
                         {section.title}
                       </h2>
-                      <div className="pl-0 md:pl-4 flex flex-row flex-wrap items-center justify-center">
+                      <div className="pl-0 md:pl-4 flex flex-row flex-wrap items-end justify-center">
                         {section.icons.map((Icon, i) => {
                           return (
                             <div
@@ -73,7 +73,7 @@ const [tabSelectedIdx, setTabSelectedIdx] = useState(0);
                       >
                         {section.title}
                       </h2>
-                      <div className="pl-0 md:pl-4 flex flex-row flex-wrap items-center justify-center">
+                      <div className="pl-0 md:pl-4 flex flex-row flex-wrap items-end justify-center">
                         {section.icons.map((Icon, i) => {
                           return (
                             <div

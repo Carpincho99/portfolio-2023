@@ -1,0 +1,4 @@
+.img {
+  background: linear-gradient(135deg, #FB8500, #d62828);
+  shape-outside: circle(50%);
+}

@@ -1,0 +1,9 @@
+.timelineItems::before{
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: calc(100% - 6px);
+  background-color: #F77F00;
+  left: calc(50%-1px);
+  top: 6px
+}
