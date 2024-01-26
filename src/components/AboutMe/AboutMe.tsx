@@ -19,7 +19,7 @@ const AboutMe = () => {
           </div>
           <div className="mt-5 md:mt-0 text-xl md:inline dark:text-white">
             <p className="pb-2">Mi nombre es Ezequiel Giorgis, tengo 21 años y soy de Córdoba, Argentina. Me apasiona el deporte y aprender cosas nuevas.</p>
-            <p className="pb-2"> Desde pequeño me ha llamado la atención el funcionamiento de las computadoras y aparatos electrónicos. Esta curiosidad me llevo a estar estudiando, a día de hoy, ingeniería electrónica en la Universidad  Tecnológica Nacional (UTN-FRC). </p>
+            <p className="pb-2">Desde pequeño me ha llamado la atención el funcionamiento de las computadoras y aparatos electrónicos. Esta curiosidad me llevo a estar estudiando, a día de hoy, ingeniería electrónica en la Universidad  Tecnológica Nacional (UTN-FRC). </p>
             <p className="pb-2">Por otra parte, de manera autodidacta, me encanta aprender sobre programación en general. Me fascina la idea de crear experiencias virtuales para el usuario, ya sea en forma de páginas web o aplicaciones mobiles.</p>
             <p className="pb-2">Por último me consideró flexible ante las innovaciones de un mundo tan cambiante, por lo que siempre estoy en busca de integrar ambos intereses: programación y electrónica, en productos vanguardistas fuera y dentro de las pantallas.</p>
           </div>
