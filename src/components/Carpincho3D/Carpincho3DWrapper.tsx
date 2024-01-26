@@ -29,8 +29,8 @@ const Carpincho3DWrapper = () => {
     <>
       <div className="relative w-full  h-2/3 md:h-screen md:w-1/2 flex items-center justify-center">
         <Canvas className="md:cursor-all-scroll">
-          <ambientLight intensity={0.8} />
-          <directionalLight intensity={0.4} position={[0, 0, 1]} />
+          <ambientLight intensity={0.3} />
+          <directionalLight intensity={0.9} position={[0, 1, 1]} />
           <Center>
             <Carpincho rotation={[0, (5 / 4) * Math.PI, 0]} scale={isMobile ? 1.8 : 1.5} />
           </Center>
