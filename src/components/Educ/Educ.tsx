@@ -33,7 +33,7 @@ const Educ = () => {
   ]
 
   return (
-    <section id="work" className="mt-5 md:mt-12">
+    <section id="educ" className="mt-5 md:mt-12">
       <motion.h2 initial={{ x: "-50vw" }} whileInView={{ x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}
         className="text-transparent bg-clip-text bg-[#F77F00] font-extrabold text-5xl overflow-hidden"
       >

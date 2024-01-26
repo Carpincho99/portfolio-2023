@@ -7,11 +7,11 @@ const AboutMe = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="work" className="mt-5">
+    <section id="aboutMe" className="mt-5">
       <motion.h2 initial={{ x: "-50vw" }} whileInView={{ x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}
         className="text-transparent bg-clip-text bg-[#F77F00] font-extrabold text-5xl overflow-hidden"
       >
-        About Me
+        {t('AboutMe.sectionTitle')}
       </motion.h2>
       <div className="w-full flex items-center justify-center">
         <div className="w-full md:w-[90%] mb-8 mt-5 md:mt-24 md:inline flex items-center justify-center flex-col">

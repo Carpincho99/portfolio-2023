@@ -38,7 +38,7 @@ const Nav = () => {
         <ul className="py-3 sticky">
           {NavLinks.map((link) => (
             <li key={link.id} className="inline-block py-3 text-sm md:text-base text-[#D62828] font-bold">
-              <a href={`#${link.id}`}>
+              <a href={`/#${link.id}`}>
                 <motion.div
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
