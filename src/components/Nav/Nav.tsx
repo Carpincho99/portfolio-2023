@@ -1,13 +1,36 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { NavLinks } from '../../constants'
 import styles from './Nav.module.css'
 
 const Nav = () => {
   const { t, i18n } = useTranslation();
   const lngs = ['en', 'es'];
   const [lng, setlng] = useState(navigator.language);
+
+  const NavLinks = [
+    {
+      id: "aboutMe",
+      text: t('Nav.me')
+    },
+    {
+      id: "skill",
+      text: t('Nav.skills')
+    },
+    {
+      id: "educ",
+      text: t('Nav.educ')
+    },
+
+    {
+      id: "work",
+      text: t('Nav.work')
+    },
+    {
+      id: "contact",
+      text: t('Nav.contact')
+    },
+  ]
 
   return (<>
     <div className={`w-8 md:w-20 fixed flex items-center justify-between flex-col top-0 right-0 h-screen  z-50`}>

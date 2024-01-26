@@ -1,14 +1,43 @@
 import { motion } from 'framer-motion'
-import { educTimelineElements } from '../../constants'
+import { useTranslation } from 'react-i18next';
 import styles from './Educ.module.css'
 
 const Educ = () => {
+  const { t } = useTranslation();
+
+  const educTimelineElements = [
+    {
+      id: 1,
+      title: t('Education.electronicStudent.title'),
+      location: t('Education.electronicStudent.place'),
+      description: t('Education.electronicStudent.summary'),
+      buttonText: "Descargar análitico",
+      date: `2021 - ${t('Education.electronicStudent.today')}`,
+    },
+    {
+      id: 2,
+      title: t('Education.primarySecondary.title'),
+      location: t('Education.primarySecondary.place'),
+      description: t('Education.primarySecondary.summary'),
+      buttonText: "Descargar análitico",
+      date: "2008 - 2020",
+    },
+    {
+      id: 3,
+      title: t('Education.argProgram.title'),
+      location: t('Education.argProgram.place'),
+      description: t('Education.argProgram.summary'),
+      buttonText: "Descargar certificado",
+      date: "2020 - 2022",
+    },
+  ]
+
   return (
     <section id="work" className="mt-5 md:mt-12">
       <motion.h2 initial={{ x: "-50vw" }} whileInView={{ x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}
         className="text-transparent bg-clip-text bg-[#F77F00] font-extrabold text-5xl overflow-hidden"
       >
-        Education
+        {t('Education.sectionTitle')}
       </motion.h2>
       <div className={`${styles.timelineItems} relative w-full px-0 md:px-14 flex flex-col justify-center items-center mt-5`}>
         {educTimelineElements.map((element) => (

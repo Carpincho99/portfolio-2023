@@ -3,35 +3,34 @@ import { motion } from 'framer-motion'
 import { Tab, TabList, TabPanel, Tabs } from 'react-tabs'
 import { SkillTitles, IngSkillTitles } from './skillArrays'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 const Skills = () => {
-
-const [tabSelectedIdx, setTabSelectedIdx] = useState(0);
+  const { t } = useTranslation();
+  const [tabSelectedIdx, setTabSelectedIdx] = useState(0);
 
   return (
     <section id="skill" className="mt-5 md:mt-12">
       <motion.div initial={{ x: "-50vw" }} whileInView={{ x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
         <h2 className="text-transparent bg-clip-text bg-[#F77F00] font-extrabold text-5xl overflow-hidden">
-          Skills
+        {t('Skills.sectionTitle')}
         </h2>
       </motion.div>
       <div className="mt-5 flex flex-col md:flex-row w-full justify-center items-start">
         <motion.div initial={{ x: "-35vw" }} whileInView={{ x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}
           className="w-full md:w-1/3">
           <p className="md:mr-6 mr-0 md:text-left text-xl dark:text-white">
-            I mainly use ReactJs and Tailwind to build beautiful website, like this portfolio. Also, I
-            am learning Svelte (which is an awesome framework!). Some other tools that I am constantly
-            working with are Git/GitHub (for version control) and Linux as my daily OS.
+            {tabSelectedIdx == 0 ? t('Skills.electronics') : t('Skills.programming')}
           </p>
         </motion.div>
         <motion.div
           initial={{ x: "50vw" }} whileInView={{ x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}
           className="w-full md:w-2/3 mt-5 md:mt-0 flex flex-col items-start drop-shadow-2xl "
         >
-          <Tabs selectedIndex={tabSelectedIdx} onSelect={(idx)=>setTabSelectedIdx(idx)} className="w-full">
+          <Tabs selectedIndex={tabSelectedIdx} onSelect={(idx) => setTabSelectedIdx(idx)} className="w-full">
             <TabList className="w-fit flex items-center cursor-pointer">
-              <Tab  className={`${tabSelectedIdx == 0 ? 'dark:bg-[#00141F] bg-[#EAE2B7]' : 'dark:bg-[#000e14] bg-[#f3d180]'} px-2 py-2 md:px-10 md:py-2 rounded-t-[1rem] font-extrabold text-3xl text-black dark:text-white`}>Electronics</Tab>
-              <Tab  className={`${tabSelectedIdx == 1 ? 'dark:bg-[#00141F] bg-[#EAE2B7]' : 'dark:bg-[#000e14] bg-[#f3d180]'} px-2 py-2 md:px-10 md:py-2 rounded-t-[1rem] font-extrabold text-3xl text-black dark:text-white`}>{window.innerWidth>768 ? 'Programming' : 'Dev'}</Tab>
+              <Tab className={`${tabSelectedIdx == 0 ? 'dark:bg-[#00141F] bg-[#EAE2B7]' : 'dark:bg-[#000e14] bg-[#f3d180]'} px-2 py-2 md:px-10 md:py-2 rounded-t-[1rem] font-extrabold text-3xl text-black dark:text-white`}>Electronics</Tab>
+              <Tab className={`${tabSelectedIdx == 1 ? 'dark:bg-[#00141F] bg-[#EAE2B7]' : 'dark:bg-[#000e14] bg-[#f3d180]'} px-2 py-2 md:px-10 md:py-2 rounded-t-[1rem] font-extrabold text-3xl text-black dark:text-white`}>{window.innerWidth > 768 ? 'Programming' : 'Dev'}</Tab>
             </TabList>
             <TabPanel className="w-full">
               <div className={`${styles.skillTitle} w-full dark:text-white flex flex-col items-center dark:bg-[#00141F] bg-[#EAE2B7] rounded-b-[1rem] rounded-tr-[1rem]`}>

@@ -5,9 +5,11 @@ import { FaGithubSquare, FaLink, FaReact } from 'react-icons/fa'
 import { SiTailwindcss } from 'react-icons/si'
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
 
 const Work = () => {
   const [isDark, setIsDark] = useState(document.documentElement.classList.contains('dark'))
+  const { t } = useTranslation();
 
   useEffect(() => {
     let observer = new MutationObserver(() => {
@@ -30,7 +32,7 @@ const Work = () => {
       <motion.h2 initial={{ x: "-50vw" }} whileInView={{ x: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}
         className="text-transparent bg-clip-text bg-[#F77F00] font-extrabold text-5xl overflow-hidden"
       >
-        Work
+        {t('Work.sectionTitle')}
       </motion.h2>
       <div className="w-full relative flex flex-col justify-center items-center mt-5 drop-shadow-2xl ">
         <div>
@@ -48,9 +50,9 @@ const Work = () => {
             <div className="md:hidden w-full flex flex-col dark:bg-[#00141F] bg-[#EAE2B7] rounded-b-2xl p-3 dark:text-white">
               <div className="flex items-center justify-start">
                 <FaLink className="mr-2" />
-                <h6 className="text-lg font-bold">this.portfolio</h6>
+                <h6 className="text-lg font-bold">{t('Work.portfolio.title')}</h6>
               </div>
-              <p className="text-md">This website was created with React and tailwind. ThreeJs was used for the 3D render and animations.</p>
+              <p className="text-md">{t('Work.portfolio.summary')}</p>
               <div className="mt-2 flex flex-row items-center justify-between">
                 <div className="flex flex-row">
                   <FaReact className="mx-1" />
@@ -69,7 +71,7 @@ const Work = () => {
               <h6 className="text-lg font-bold">this.portfolio</h6>
             </div>
             <p className="text-md">
-              This website was created with React and tailwind. ThreeJs was used for the 3D render and animations.
+              {t('Work.portfolio.summary')}
             </p>
             <div className="mt-2 flex flex-row items-center justify-between">
               <div className="flex flex-row">
