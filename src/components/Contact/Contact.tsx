@@ -24,19 +24,19 @@ const Contact = () => {
               <label htmlFor="" className="font-extrabold text-2xl overflow-hidden">{t('Contact.name')}</label>
             </div>
             <div className="m-2 mt-3 w-[95%] relative text-black">
-              <input type="text" placeholder="Name" className="px-2 text-lg py-2 ring-1 ring-gray-300 w-full border-none  rounded-md" />
+              <input type="text" placeholder={t('Contact.name')} className="px-2 text-lg py-2 ring-1 ring-gray-300 w-full border-none  rounded-md" />
             </div>
             <div className="w-full m-2 mt-3 relative">
               <label htmlFor="" className="font-extrabold text-2xl overflow-hidden">{t('Contact.email')}</label>
             </div>
             <div className="m-2 mt-3 w-[95%] relative text-black">
-              <input type="email" placeholder="Email" className="px-2 py-2 text-lg ring-1 ring-gray-300 w-full border-none rounded-md" />
+              <input type="email" placeholder={t('Contact.email')} className="px-2 py-2 text-lg ring-1 ring-gray-300 w-full border-none rounded-md" />
             </div>
             <div className="w-full m-2 mt-3 relative">
               <label htmlFor="" className="font-extrabold text-2xl overflow-hidden">{t('Contact.message')}</label>
             </div>
             <div className="m-2 mt-3 w-[95%] relative text-black">
-              <textarea placeholder="Message" className="px-2 py-2 ring-1 ring-gray-300 w-full border-none rounded-md" />
+              <textarea placeholder={t('Contact.message')} className="px-2 py-2 ring-1 ring-gray-300 w-full border-none rounded-md" />
             </div>
             <motion.button
               className="m-2 mt-3 w-full py-2 rounded-lg bg-[#F77F00] font-extrabold border-none text-2xl"
