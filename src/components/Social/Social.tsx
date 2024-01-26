@@ -73,6 +73,7 @@ const Social = () => {
                 </motion.div>
               </a>
             </li>
+            {/*
             <li className="pb-3 drop-shadow-md hover:drop-shadow-xl">
               <a href="">
                 <motion.div
@@ -83,6 +84,8 @@ const Social = () => {
                 </motion.div>
               </a>
             </li>
+            */
+            }
           </ul>
         </div>
         <div className="bg-[#F77F00] h-12 w-[2px] mb-4 "></div>
